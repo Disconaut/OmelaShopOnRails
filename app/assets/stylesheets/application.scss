@@ -23,6 +23,8 @@
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/bootstrap.scss";
 @import "~@fortawesome/fontawesome-free";
+@import "hamburgers-custom";
+@import "~hamburgers/_sass/hamburgers/hamburgers";
 
 .vh-80 {
   height: 80vh;
@@ -56,6 +58,10 @@ body:not(.collapse-show) > .header-top {
   padding-right: 0 !important;
   text-transform: uppercase;
   font-size: 0.875rem;
+}
+
+.navbar-toggler:not(.collapsed){
+  @extend .is-active;
 }
 
 .image{
@@ -344,6 +350,24 @@ body:not(.collapse-show) > .header-top {
 
 .product-table {
   .card {
+    @include media-breakpoint-up('lg') {
+      .btn-cart{
+        opacity: 0 !important;
+        -webkit-transition: opacity 0.2s;
+        -moz-transition:opacity 0.2s;
+        transition: opacity 0.2s;
+      }
+      &:hover .btn-cart{
+        opacity:1 !important;
+      }
+    }
+
+    @include media-breakpoint-down('sm'){
+      .btn-cart {
+        display: none;
+      }
+    }
+
     > .card-body {
       padding: 0;
       .card-title{
@@ -376,10 +400,6 @@ body:not(.collapse-show) > .header-top {
         &:hover [data-prefix="fas"].fa-heart{
           opacity: 1;
         }
-      }
-      .btn-cart{
-        height: fit-content;
-        line-height: 1.25rem;
       }
     }
   }
