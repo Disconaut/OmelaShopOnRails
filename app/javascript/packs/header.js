@@ -16,9 +16,9 @@ const headroom = new Headroom(header, {
 headroom.init();
 
 $(".navbar-collapse").on("show.bs.collapse", function(){
-    $(header).addClass("collapse-show");
+    $(document.body).addClass("collapse-show");
 });
 
 $(".navbar-collapse").on("hide.bs.collapse", function(){
-    $(header).removeClass("collapse-show");
+    $(document.body).removeClass("collapse-show");
 });
