@@ -141,6 +141,7 @@ body:not(.collapse-show) > .header-top {
   font-weight: 600;
 }
 
+
 .pages-menu {
   position: static !important;
 
@@ -532,6 +533,18 @@ img.decoration{
   object-fit: cover;
   height: 100%;
   width: 100%;
+}
+
+.pagination {
+  .page-item > .page-link {
+    @include transition(all 0.2s);
+    padding: 0;
+    width: calc(1.5em + 1.875rem);
+    height: calc(1.5em + 1.875rem);
+    line-height: calc(1.5em + 1.875rem);
+    text-align: center;
+    border-radius: 0;
+  }
 }
 
 @media(min-width: map-get($grid-breakpoints, "lg")) {

@@ -243,6 +243,22 @@ $breadcrumb-item-padding: 0.625rem;
 
 $enable-responsive-font-sizes: true;
 
+$pagination-color:                  $body-color;
+$pagination-bg:                     transparent;
+$pagination-border-color:           transparent;
+
+$pagination-hover-color:            $body-color;
+$pagination-hover-bg:               transparent;
+$pagination-hover-border-color:     $border-color;
+
+$pagination-active-color:           $black;
+$pagination-active-bg:              transparent;
+$pagination-active-border-color:    $black;
+
+$pagination-disabled-color:         $border-color;
+$pagination-disabled-bg:            transparent;
+$pagination-disabled-border-color:  transparent;
+
 // social colors
 $facebook: #3b5998;
 $google-plus: #dd4b39;
