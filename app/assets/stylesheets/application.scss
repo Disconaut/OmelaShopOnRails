@@ -464,6 +464,40 @@ body:not(.collapse-show) > .header-top {
   }
 }
 
+.filters > li {
+  display: inline-block;
+  margin: 0.3125rem 0.3125rem 0 0;
+  position: relative;
+  padding: 0.625rem 3.125rem 0.625rem 1.25rem;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: .05em;
+  color: #000;
+  border: 1px solid #dddddd;
+
+  > .close{
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    font-size: 1.125rem;
+    font-family: "Muli", sans-serif;
+    color: #555;
+    opacity: 1;
+
+    &:hover {
+      background-color: $gray-300;
+    }
+  }
+}
+
 a.text-white-50:hover{
   color: #fff !important;
 }
