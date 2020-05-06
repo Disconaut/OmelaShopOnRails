@@ -108,6 +108,10 @@ $dropdown-font-size: 0.875rem;
 $dropdown-border-width: 0;
 $dropdown-header-color: $gray-500;
 $dropdown-border-radius: 0;
+$dropdown-link-hover-bg: inherit;
+$dropdown-link-active-bg: inherit;
+$dropdown-link-active-color: $gray-800;
+
 
 $dropdown-link-hover-color: $gray-900;
 
@@ -128,7 +132,11 @@ $spacers: map-merge(
                         7: ($spacer * 4.375),
                         8: ($spacer * 5),
                         9: ($spacer * 5.625),
-                        10: ($spacer * 6.25)
+                        10: ($spacer * 6.25),
+                        11: ($spacer * 6.875),
+                        12: ($spacer * 7.5),
+                        13: ($spacer * 8.125),
+                        14: ($spacer * 8.75)
                 ),
                 $spacers
 );
@@ -226,6 +234,12 @@ $card-inner-border-radius: 0;
 
 $font-weight-light: 300;
 $font-weight-bold: 600;
+
+$breadcrumb-divider: quote(">");
+$breadcrumb-divider-color: inherit;
+$breadcrumb-font-size: 0.75rem;
+$breadcrumb-bg: trasparent;
+$breadcrumb-item-padding: 0.625rem;
 
 $enable-responsive-font-sizes: true;
 

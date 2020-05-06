@@ -15,7 +15,7 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @font-face {
   font-family: "Muli";
-  src: url(/packs/media/fonts/Muli-VariableFont_wght.ttf);
+  src: url(../fonts/Muli-VariableFont_wght.ttf);
 }
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
@@ -336,6 +336,12 @@ body:not(.collapse-show) > .header-top {
 
 }
 
+.dropdown-menu{
+  .dropdown-item {
+    width: fit-content;
+  }
+}
+
 .btn:not(.btn-link){
   text-transform: uppercase;
   letter-spacing: .05rem;
@@ -405,6 +411,14 @@ body:not(.collapse-show) > .header-top {
   }
 }
 
+.bg-blue {
+  background-color: $blue;
+}
+
+.breadcrumb-item:before{
+  font-weight: bold;
+}
+
 .font-size-sm {
   font-size: $font-size-sm;
 }
@@ -469,6 +483,23 @@ body{
   margin-bottom: 821px;
 }
 
+.decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+  background-size: cover;
+  background-position: center 50%;
+}
+
+img.decoration{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
 @media(min-width: map-get($grid-breakpoints, "lg")) {
   body{
     margin-bottom: 436px;
@@ -499,7 +530,7 @@ body{
 }
 
 
-@media(max-width: map-get($grid-breakpoints, "lg")) {
+@include media-breakpoint-down('lg') {
   .header-show {
     transform: translateY(0);
     opacity: 1;
