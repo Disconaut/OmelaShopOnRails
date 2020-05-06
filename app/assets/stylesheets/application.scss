@@ -15,7 +15,7 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @font-face {
   font-family: "Muli";
-  src: url(/packs/media/fonts/Muli-VariableFont_wght.ttf);
+  src: url(../fonts/Muli-VariableFont_wght.ttf);
 }
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
@@ -139,6 +139,12 @@ body:not(.collapse-show) > .header-top {
   font-size: 0.75rem;
   letter-spacing: .1rem;
   font-weight: 600;
+}
+
+.dropdown-menu{
+  .dropdown-item {
+    width: fit-content;
+  }
 }
 
 .pages-menu {
@@ -405,6 +411,14 @@ body:not(.collapse-show) > .header-top {
   }
 }
 
+.bg-blue {
+  background-color: $blue;
+}
+
+.breadcrumb-item:before{
+  font-weight: bold;
+}
+
 .font-size-sm {
   font-size: $font-size-sm;
 }
@@ -450,6 +464,40 @@ body:not(.collapse-show) > .header-top {
   }
 }
 
+.filters > li {
+  display: inline-block;
+  margin: 0.3125rem 0.3125rem 0 0;
+  position: relative;
+  padding: 0.625rem 3.125rem 0.625rem 1.25rem;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: .05em;
+  color: #000;
+  border: 1px solid #dddddd;
+
+  > .close{
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    font-size: 1.125rem;
+    font-family: "Muli", sans-serif;
+    color: #555;
+    opacity: 1;
+
+    &:hover {
+      background-color: $gray-300;
+    }
+  }
+}
+
 a.text-white-50:hover{
   color: #fff !important;
 }
@@ -467,6 +515,35 @@ footer {
 
 body{
   margin-bottom: 821px;
+}
+
+.decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+  background-size: cover;
+  background-position: center 50%;
+}
+
+img.decoration{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.pagination {
+  .page-item > .page-link {
+    @include transition(all 0.2s);
+    padding: 0;
+    width: calc(1.5em + 1.875rem);
+    height: calc(1.5em + 1.875rem);
+    line-height: calc(1.5em + 1.875rem);
+    text-align: center;
+    border-radius: 0;
+  }
 }
 
 @media(min-width: map-get($grid-breakpoints, "lg")) {
@@ -499,7 +576,7 @@ body{
 }
 
 
-@media(max-width: map-get($grid-breakpoints, "lg")) {
+@include media-breakpoint-down('lg') {
   .header-show {
     transform: translateY(0);
     opacity: 1;

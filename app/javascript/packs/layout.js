@@ -1,9 +1,9 @@
 import("src/plugins")
 import Headroom from 'headroom.js';
 
-const header = document.querySelector("header");
+const layout = document.querySelector("header");
 
-const headroom = new Headroom(header, {
+const headroom = new Headroom(layout, {
     tolerance: 10,
     classes: {
         initial: "header",

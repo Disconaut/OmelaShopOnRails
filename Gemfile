@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.5'
 
 gem 'font_awesome5_rails', '~> 1.1', '>= 1.1.1'
+gem "sentry-raven"
 gem 'goodcheck'
 gem 'querly'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
