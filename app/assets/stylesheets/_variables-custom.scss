@@ -81,6 +81,7 @@ $primary: #4F944F;
 $secondary: $gray-300;
 $success: #4F944F;
 $dark: $gray-900;
+$light: #efefef;
 
 // stylelint-disable-next-line scss/dollar-variable-default
 $theme-colors: ();
@@ -240,6 +241,8 @@ $breadcrumb-divider-color: inherit;
 $breadcrumb-font-size: 0.75rem;
 $breadcrumb-bg: trasparent;
 $breadcrumb-item-padding: 0.625rem;
+$breadcrumb-padding-x: 0;
+$breadcrumb-padding-y: 0;
 
 $enable-responsive-font-sizes: true;
 

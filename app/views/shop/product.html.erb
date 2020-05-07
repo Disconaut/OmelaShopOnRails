@@ -1,0 +1,781 @@
+<% content_for :bottomScripts do %>
+  <%= javascript_pack_tag 'product', 'data-turbolinks-track': 'reload' %>
+<% end %>
+
+<section class="breadcrumbs-section pt-10 pb-2 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb m-0">
+            <li class="breadcrumb-item"><%= link_to "Home", "index", class: "underline link-primary" %></li>
+            <li class="breadcrumb-item"><a href="listing-sidebar.html" class="underline link-primary">Shop</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Product</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero bg-light pt-5">
+  <div class="container">
+    <div class="row-gutter-2 row-gutter-md-4 justify-content-between">
+
+      <div class="col-lg-7">
+        <div class="row-gutter-1 justify-content-between">
+          <div id="itemCarousel" class="col-lg-10 order-lg-last carousel slide" data-interval="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <a class="card-square d-block w-100" href="assets/images/demo/product-8.jpg">
+                  <%= image_tag 'products/product-8.jpg', class: "obj-fit-cover obj-position-center card-content" %>
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a class="card-square d-block w-100" href="assets/images/demo/product-8-2.jpg">
+                  <%= image_tag 'products/product-8-2.jpg', class: "obj-fit-cover obj-position-center image card-content" %>
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a class="card-square d-block w-100" href="assets/images/demo/product-8-3.jpg">
+                  <%= image_tag 'products/product-8-3.jpg', class: "obj-fit-cover obj-position-center card-content" %>
+                </a>
+              </div>
+              <%= link_to "#itemCarousel", class: "carousel-control carousel-control-prev", role: "button", "data-slide": "prev", "data-turbolinks": "false" do %>
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              <% end %>
+              <%= link_to "#itemCarousel", class: "carousel-control carousel-control-next", role: "button", "data-slide": "next", "data-turbolinks": "false" do %>
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              <% end %>
+            </div>
+          </div>
+          <div class="col-lg-2 text-center text-lg-left order-lg-first">
+            <ol id="itemThumbs" class="p-0 m-0 carousel-thumbs carousel-thumbs-vertical-lg">
+              <li data-target="#itemCarousel" data-slide-to="0" class="active"><%= image_tag 'products/product-8.jpg', class: 'img-fluid' %></li>
+              <li data-target="#itemCarousel" data-slide-to="1" ><%= image_tag 'products/product-8-2.jpg', class: 'img-fluid' %></li>
+              <li data-target="#itemCarousel" data-slide-to="2" ><%= image_tag 'products/product-8-3.jpg', class: 'img-fluid' %></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+
+    <div class="col-lg-5 mb-5 mb-lg-0">
+      <div class="row">
+        <div class="col-12">
+          <span class="item-brand">Ucon Acrobatics</span>
+          <h1 class="item-title">Hajo Backpack</h1>
+          <span class="item-price"><s class="text-muted">$113</s> $99</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <p>This minimalist backpack is suitable for any occasion. Whether on the road by bike, shopping or in the
+            nightlife.</p>
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="form-group">
+            <label>Color</label>
+            <div class="btn-group-toggle btn-group-square btn-group-colors" data-toggle="buttons">
+              <label class="btn active text-red">
+                <input type="radio" name="options" id="option1-2" checked="">
+              </label>
+              <label class="btn text-blue">
+                <input type="radio" name="options" id="option2-2">
+              </label>
+              <label class="btn text-yellow">
+                <input type="radio" name="options" id="option3-2">
+              </label>
+              <label class="btn text-green">
+                <input type="radio" name="options" id="option4-2">
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <a href="#!" class="btn btn-block btn-lg btn-primary">Add to Cart</a>
+        </div>
+        <div class="col-12 mt-1">
+          <ul class="nav nav-actions">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Add to wishlist</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Share
+                this product</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">Facebook</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Twitter</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+</section>
+
+<section class="separator-bottom">
+  <div class="container">
+    <div class="row gutter-2 gutter-lg-4">
+      <div class="col-md-4 col-lg-2">
+        <div class="rate">
+          <span>4.9</span>
+          <a data-toggle="modal" data-target="#reviews" class="action eyebrow text-primary underline">View Reviews</a>
+        </div>
+      </div>
+      <div class="col-md-8 col-lg-6">
+        <p>This minimalist backpack is suitable for any occasion. Whether on the road by bike, shopping or in the
+          nightlife. The roll-top closes with velcro and allows a practical filling of the Hajo backpack.</p>
+      </div>
+      <div class="col-lg-4 cc_cursor">
+        <ul class="list-group list-group-line">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            SKU
+            <span class="text-dark">1421354</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Category
+            <span class="text-dark"><a href="" class="underline text-dark">Bags</a>, <a href="" class="underline text-dark">Backpack</a></span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center cc_cursor">
+            Tags
+            <span class="text-dark"><a href="" class="underline text-dark">backpack</a>, <a href="" class="underline text-dark">minimal</a></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="no-overflow">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 mb-3">
+        <ul class="nav nav-tabs lavalamp cc_cursor" id="myTab" role="tablist">
+          <div class="lavalamp-object ease cc_cursor" style="transition-duration: 0.2s; width: 145.797px; height: 26px; transform: translate(0px, 0px);"></div>
+          <li class="nav-item lavalamp-item" style="z-index: 5; position: relative;">
+            <a class="nav-link cc_pointer active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Related
+              Products</a>
+          </li>
+          <li class="nav-item lavalamp-item" style="z-index: 5; position: relative;">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Bought
+              With This</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="owl-carousel owl-carousel-arrows visible owl-loaded owl-drag" data-items="[4,4,2,1]" data-margin="10" data-loop="true" data-dots="true" data-nav="true">
+
+
+              <div class="owl-stage-outer">
+                <div class="owl-stage" style="transform: translate3d(-1600px, 0px, 0px); transition: all 0s ease 0s; width: 4480px;">
+                  <div class="owl-item cloned" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-4.jpg" alt="Image">
+                          <img src="assets/images/demo/product-4-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Red Analog Magazine Rack</a></h3>
+                        <div class="product-price">
+                          <span>$120</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item cloned" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-5.jpg" alt="Image">
+                          <img src="assets/images/demo/product-5-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Black Piani Table Lamp</a></h3>
+                        <div class="product-price">
+                          <span>$290</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item cloned" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-6.jpg" alt="Image">
+                          <img src="assets/images/demo/product-6-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Grey Pendant Bell Lamp</a></h3>
+                        <div class="product-price">
+                          <span>$258</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item cloned" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-7.jpg" alt="Image">
+                          <img src="assets/images/demo/product-7-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Garnet Must Sofa</a></h3>
+                        <div class="product-price">
+                          <span>$4,668</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-1.jpg" alt="Image">
+                          <img src="assets/images/demo/product-1-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Fawn Wool / Natural Mammoth Chair </a></h3>
+                        <div class="product-price">
+                          <span>$2,268</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item active" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-3.jpg" alt="Image">
+                          <img src="assets/images/demo/product-3-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Black IC Pendant Light</a></h3>
+                        <div class="product-price">
+                          <span>$410</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item active" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-4.jpg" alt="Image">
+                          <img src="assets/images/demo/product-4-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Red Analog Magazine Rack</a></h3>
+                        <div class="product-price">
+                          <span>$120</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item active" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-5.jpg" alt="Image">
+                          <img src="assets/images/demo/product-5-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Black Piani Table Lamp</a></h3>
+                        <div class="product-price">
+                          <span>$290</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item active" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-6.jpg" alt="Image">
+                          <img src="assets/images/demo/product-6-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Grey Pendant Bell Lamp</a></h3>
+                        <div class="product-price">
+                          <span>$258</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-7.jpg" alt="Image">
+                          <img src="assets/images/demo/product-7-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Garnet Must Sofa</a></h3>
+                        <div class="product-price">
+                          <span>$4,668</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item cloned" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-1.jpg" alt="Image">
+                          <img src="assets/images/demo/product-1-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Fawn Wool / Natural Mammoth Chair </a></h3>
+                        <div class="product-price">
+                          <span>$2,268</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item cloned" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-3.jpg" alt="Image">
+                          <img src="assets/images/demo/product-3-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Black IC Pendant Light</a></h3>
+                        <div class="product-price">
+                          <span>$410</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item cloned" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-4.jpg" alt="Image">
+                          <img src="assets/images/demo/product-4-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Red Analog Magazine Rack</a></h3>
+                        <div class="product-price">
+                          <span>$120</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item cloned" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-5.jpg" alt="Image">
+                          <img src="assets/images/demo/product-5-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Black Piani Table Lamp</a></h3>
+                        <div class="product-price">
+                          <span>$290</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="owl-nav">
+                <button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button>
+                <button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button>
+              </div>
+              <div class="owl-dots cc_cursor">
+                <button role="button" class="owl-dot active"><span></span></button>
+                <button role="button" class="owl-dot cc_pointer"><span></span></button>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="owl-carousel visible owl-loaded owl-drag owl-hidden" data-items="[4,4,2,1]" data-margin="10" data-loop="true" data-dots="true">
+
+
+              <div class="owl-stage-outer">
+                <div class="owl-stage" style="transform: translate3d(-1280px, 0px, 0px); transition: all 0s ease 0s; width: 4480px;">
+                  <div class="owl-item cloned" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-7.jpg" alt="Image">
+                          <img src="assets/images/demo/product-7-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Garnet Must Sofa</a></h3>
+                        <div class="product-price">
+                          <span>$4,668</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item cloned" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-3.jpg" alt="Image">
+                          <img src="assets/images/demo/product-3-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Black IC Pendant Light</a></h3>
+                        <div class="product-price">
+                          <span>$410</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item cloned" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-5.jpg" alt="Image">
+                          <img src="assets/images/demo/product-5-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Black Piani Table Lamp</a></h3>
+                        <div class="product-price">
+                          <span>$290</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item cloned" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-4.jpg" alt="Image">
+                          <img src="assets/images/demo/product-4-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Red Analog Magazine Rack</a></h3>
+                        <div class="product-price">
+                          <span>$120</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item active" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-6.jpg" alt="Image">
+                          <img src="assets/images/demo/product-6-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Grey Pendant Bell Lamp</a></h3>
+                        <div class="product-price">
+                          <span>$258</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item active" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-1.jpg" alt="Image">
+                          <img src="assets/images/demo/product-1-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Fawn Wool / Natural Mammoth Chair </a></h3>
+                        <div class="product-price">
+                          <span>$2,268</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item active" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-7.jpg" alt="Image">
+                          <img src="assets/images/demo/product-7-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Garnet Must Sofa</a></h3>
+                        <div class="product-price">
+                          <span>$4,668</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item active" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-3.jpg" alt="Image">
+                          <img src="assets/images/demo/product-3-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Black IC Pendant Light</a></h3>
+                        <div class="product-price">
+                          <span>$410</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-5.jpg" alt="Image">
+                          <img src="assets/images/demo/product-5-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Black Piani Table Lamp</a></h3>
+                        <div class="product-price">
+                          <span>$290</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-4.jpg" alt="Image">
+                          <img src="assets/images/demo/product-4-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Red Analog Magazine Rack</a></h3>
+                        <div class="product-price">
+                          <span>$120</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item cloned" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-6.jpg" alt="Image">
+                          <img src="assets/images/demo/product-6-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Grey Pendant Bell Lamp</a></h3>
+                        <div class="product-price">
+                          <span>$258</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item cloned" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-1.jpg" alt="Image">
+                          <img src="assets/images/demo/product-1-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Fawn Wool / Natural Mammoth Chair </a></h3>
+                        <div class="product-price">
+                          <span>$2,268</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item cloned" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-7.jpg" alt="Image">
+                          <img src="assets/images/demo/product-7-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Garnet Must Sofa</a></h3>
+                        <div class="product-price">
+                          <span>$4,668</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-item cloned" style="width: 310px; margin-right: 10px;">
+                    <div class="product">
+                      <figure class="product-image">
+                        <a href="#!">
+                          <img src="assets/images/demo/product-3.jpg" alt="Image">
+                          <img src="assets/images/demo/product-3-2.jpg" alt="Image">
+                        </a>
+                      </figure>
+                      <div class="product-meta">
+                        <h3 class="product-title"><a href="#!">Black IC Pendant Light</a></h3>
+                        <div class="product-price">
+                          <span>$410</span>
+                          <span class="product-action">
+                          <a href="#!">Add to cart</a>
+                        </span>
+                        </div>
+                        <a href="#!" class="product-like"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="owl-nav disabled">
+                <button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button>
+                <button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button>
+              </div>
+              <div class="owl-dots">
+                <button role="button" class="owl-dot active"><span></span></button>
+                <button role="button" class="owl-dot"><span></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

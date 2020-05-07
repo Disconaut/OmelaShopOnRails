@@ -8,7 +8,9 @@
   <%= csp_meta_tag %>
 
   <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= content_for?(:styles) ? yield(:styles) : '' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= content_for?(:headScripts) ? yield(:scripts) : '' %>
 </head>
 
 <body>
@@ -190,6 +192,7 @@
   </div>
 </footer>
 
-<%= javascript_pack_tag 'layout' %>
+<%= javascript_pack_tag 'layout', 'data-turbolinks-track': 'reload' %>
+<%= content_for?(:bottomScripts) ? yield(:bottomScripts) : '' %>
 </body>
 </html>

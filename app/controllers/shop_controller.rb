@@ -3,4 +3,7 @@ class ShopController < ApplicationController
   end
   def listing
   end
+  def product
+
+  end
 end

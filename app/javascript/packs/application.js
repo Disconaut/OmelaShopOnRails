@@ -11,7 +11,7 @@ import * as Sentry from '@sentry/browser';
 
 Sentry.init({ dsn: 'https://e921d4c559404cf98ab0e8dde94a61fe@o388617.ingest.sentry.io/5225761' });
 
-
+import('src/plugins');
 import "@fortawesome/fontawesome-free/js/all"
 
 FontAwesome.config.mutateApproach = 'sync';

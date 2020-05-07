@@ -4,11 +4,12 @@
     <div class="row align-items-end row-gutter-2">
       <div class="col-md-8 text-white">
         <h1 class="m-0">Shop</h1>
-        <ol class="breadcrumb text-white-50 m-0 p-0">
+        <nav aria-label="breadcrumbs">
+        <ol class="breadcrumb text-white-50 m-0">
           <li class="breadcrumb-item"><%= link_to root_path, class: "underline text-white-50" do %><span>Home</span>
             <% end %></li>
           <li class="breadcrumb-item" aria-current="page"><span>Listing</span></li>
-        </ol>
+        </ol></nav>
       </div>
       <div class="col-md-4 text-md-right">
         <div role="group" class="btn-group btn-group-sm">
